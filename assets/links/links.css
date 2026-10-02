@@ -1,0 +1,143 @@
+@font-face {
+    font-family: DepartureMono;
+    src: url("/assets/DepartureMono-Regular.otf") format("opentype");
+}
+
+body {
+    background-color: #645c74;
+    height: 100%; 
+    overflow: hidden;
+    background-image: url("/assets/grid-bg.gif");
+    font-family: DepartureMono;
+}
+
+@keyframes flyin {
+    0% {
+        transform: translatex(-5000px) translatey(-5000px)
+    }
+    /*80% {
+        transform: translatex(50px) translatey(50px);
+    }
+    90% {
+        transform: translatex(-25px) translatey(-25px);
+    }*/
+    100% {
+        transform: translatex(0px) translatey(0px);
+    }
+}
+
+@keyframes flyout {
+    0% {
+        transform: translatex(0px) translatey(0px)
+    }
+    /*80% {
+        transform: translatex(50px) translatey(50px);
+    }
+    90% {
+        transform: translatex(-25px) translatey(-25px);
+    }*/
+    100% {
+        transform: translatex(-5000px) translatey(-5000px);
+    }
+}
+
+@keyframes diagonal-move {
+
+	0% {
+		transform: translatex(0) translatey(0);
+	}
+
+	100% {
+		transform: translatex(100vw) translatey(100vh);
+	}
+
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.home {
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    height: 415px;
+    background-color: #1F1D2B;
+    box-shadow: 20px 20px black;
+    animation-name: flyin;
+    animation-duration: 1s;
+}
+
+.homeimg {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 100%;
+    border: 2px solid white;    
+    margin-bottom: -10px;
+}
+
+.hometext-h1 {
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.homebutton {
+    margin-top: 2%;
+}
+
+button {
+    padding: 5px;
+    background-color: #A197DD;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0);
+    transition: font-weight 0.15s;
+}
+
+img {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+button:hover {
+    font-weight: 700;
+}
+
+a, a.visited {
+  color: #DC9E9D;
+}
+
+.windec_close {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.windec_min {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  margin-right: 14px;
+}
+.windec_max {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+  margin-right: 12px;
+}
